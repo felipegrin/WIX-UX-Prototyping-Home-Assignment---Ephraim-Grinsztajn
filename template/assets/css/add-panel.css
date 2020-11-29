@@ -20,8 +20,8 @@
 
 /* Add Panel */
 .add-panel {
-    width: 1334px;
-    height: 842px;
+    width: 80%;
+    height: 80%;
     border-radius: 15px;
     background-color: white;
     position: fixed;
@@ -95,8 +95,9 @@
 
 /* Add Panel left side */
 .categories-list {
+    box-sizing: border-box;
     width: 20%;
-    height: 822px;
+    height: 100%;
     border-radius: 15px 0 0 15px;
     background-color: #3899EC;
     padding: 10px;
