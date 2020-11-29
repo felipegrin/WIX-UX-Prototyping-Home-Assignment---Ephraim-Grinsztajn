@@ -18,6 +18,7 @@ There are visual clues for clickable elements to indicate functional components 
 - The Add-Panel HTML code is  inside the "Add Panel" section inside the index.html
 - The Add-Panel CSS code is inside assets/css/add-panel.css
 - The Add-Panel Javascript code is inside assets/js/add-panel.js
+- The Drag & Drop Javascript code is inside assets/js/drag-and-drop.js
 - The project uses jQuery for simplicity of the code
 
 ### Observations
