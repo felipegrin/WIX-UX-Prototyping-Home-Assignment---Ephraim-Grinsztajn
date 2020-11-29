@@ -1,4 +1,8 @@
 # WIX UX Prototyping Home Assignment - Ephraim Grinsztajn
+## A code-based prototype illustrating a new approach for the Editor’s ‘Add panel’.
+
+[Click here for the live demo](https://ephraimgrin.com/wix-home-task)
+(Password is 1608)
 
 ### Overview
 This project is a code-based prototype illustrating a new approach for the Editor’s ‘Add panel’. 
