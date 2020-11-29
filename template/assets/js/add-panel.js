@@ -32,7 +32,18 @@ $('.Add-Toolbar-Active').click(function () {
 });
 
 //Selecting Category
-$(document).on('click', ".sub-categories-list li:not(.active)", function (event) {
+$(document).on('click', ".category-item:not(.active)", function () {
+    $(this).addClass("active");
+});
+
+$(document).on('click', ".category-item.active > .category-name", function () {
+    $(".category-item").removeClass("active");
+    $("li").removeClass("active");
+    $(".content-empty").show();
+    $(".content-element").hide();
+});
+
+$(document).on('click', ".sub-categories-list li:not(.active)", function () {
     $(".category-item").removeClass("active");
     $("li").removeClass("active");
     $(this).parents(".category-item").addClass("active");
@@ -42,7 +53,7 @@ $(document).on('click', ".sub-categories-list li:not(.active)", function (event)
 });
 
 //Deselecting Category
-$(document).on('click', ".sub-categories-list li.active", function (event) {
+$(document).on('click', ".sub-categories-list li.active", function () {
     $(".category-item").removeClass("active");
     $("li").removeClass("active");
     $(".content-empty").show();
