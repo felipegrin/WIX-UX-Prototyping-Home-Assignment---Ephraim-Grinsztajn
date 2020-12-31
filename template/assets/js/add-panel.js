@@ -1,11 +1,3 @@
-//Demo Indicator
-$(document).click(function () {
-    $(".indicator").fadeIn();
-    setTimeout(function () {
-        $(".indicator").fadeOut();
-    }, 500);
-});
-
 //Opening Add Panel
 $('.leftbar-item-add').click(function () {
     event.stopPropagation();
@@ -21,6 +13,17 @@ function closePanel() {
     $("li").removeClass("active");
     $(".content-empty").show();
     $(".content-element").hide();
+
+    //Reset panel size
+    $(".add-panel").css({"width": "600px", "height": "70%"});
+
+    //Reset filters
+    $('#search').val("");
+    $(".category-item").show();
+    $(".sub-categories-list ul li").show();
+    $(".sub-categories-list span").show();
+    $(".category-item").removeClass("active");
+    $(".resetFilters").hide();
 }
 
 $('.close').click(function () {

@@ -1,0 +1,61 @@
+.instructions {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.overlay {
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  width: 800px;
+  height: 520px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 3, 6, 1);
+}
+
+.modal img {
+  margin: auto;
+  width: 80px;
+  display: inline;
+}
+
+.modal button {
+  padding: 10px 50px;
+}
+
+.tip {
+  text-align: left;
+  padding: 20px 50px;
+  background-color: #FFFBE5;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+.tip img {
+  float: left;
+  width: 30px;
+  margin-right: 20px;
+}
+
+
+/* Demo indicator */
+.indicator {
+  display: block;
+  position: absolute;
+  left: 80px;
+  top: 185px;
+  display: none;
+}

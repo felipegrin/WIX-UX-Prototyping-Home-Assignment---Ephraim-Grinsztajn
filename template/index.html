@@ -12,10 +12,13 @@
   <link rel="stylesheet" href="./assets/css/ptyp.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/add-panel.css">
+  <link rel="stylesheet" href="./assets/css/instructions.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
 </head>
 
 <body class="text-HelveticaNeueW01-45Light">
+
   <!-- TOP BAR -->
   <div class="topbar flex justify-between fixed">
     <div class="left-side flex row align-center">
@@ -150,7 +153,7 @@
   <div class="add-panel" id="add-panel">
     <!-- ADD PANEL LEFT SIDE -->
     <div class="categories-list">
-      <input type="text" placeholder="Search Elements">
+      <div style="position: relative;"><input id="search" type="text" placeholder="Search Elements"><img class="resetFilters" src="assets/add-panel/reset-filter.svg" alt=""></div>
       <hr>
       <div class="category-item">
         <div class="category-name">
@@ -161,15 +164,15 @@
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Text</span>
+          <span class="hide">Text</span>
           <ul>
             <li>Themed Text</li>
             <li>Titles</li>
             <li>Paragraphs</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -179,15 +182,15 @@
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Image</span>
+          <span class="hide">Image</span>
           <ul>
             <li>My Uploads</li>
             <li>Image Collections</li>
             <li>My Social Images</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -199,9 +202,9 @@
         <div class="sub-categories-list">
           <span>Button</span>
           <ul>
-            <li>Themed</li>
-            <li>Text & Icon</li>
-            <li>Icons</li>
+            <li>Themed Buttons</li>
+            <li>Text & Icon Buttons</li>
+            <li>Icon Buttons</li>
           </ul>
         </div>
         <div class="sub-categories-list">
@@ -211,8 +214,8 @@
             <li>PayPal Buttons</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -222,15 +225,15 @@
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Gallery</span>
+          <span class="hide">Gallery</span>
           <ul>
             <li>Recomended</li>
             <li>Pro Galleries</li>
             <li>Slider Galleries</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -245,6 +248,7 @@
             <li>My Lines</li>
             <li>Themed Lines</li>
             <li>Basic Shapes</li>
+            <li>Decorative Shapes</li>
           </ul>
         </div>
         <div class="sub-categories-list">
@@ -255,8 +259,8 @@
             <li>Animals</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -280,8 +284,8 @@
             <li>Wix Music</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -313,8 +317,8 @@
             <li>LINE</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
@@ -324,192 +328,96 @@
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Store</span>
+          <span class="hide">Store</span>
           <ul>
             <li>Wix Art Store</li>
             <li>Paypal Button</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-text.svg">
-            <span>Text</span>
+            <img src="assets/add-panel/icon-box.svg">
+            <span>Box</span>
           </div>
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Text</span>
+          <span class="hide">Box</span>
           <ul>
-            <li>Themed Text</li>
-            <li>Titles</li>
-            <li>Paragraphs</li>
+            <li>My Boxes</li>
+            <li>Themed Boxes</li>
+            <li>Container Boxes</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-image.svg">
-            <span>Image</span>
+            <img src="assets/add-panel/icon-lists.svg">
+            <span>Lists & Grids</span>
           </div>
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Image</span>
+          <span>Lists</span>
           <ul>
-            <li>My Uploads</li>
-            <li>Image Collections</li>
-            <li>My Social Images</li>
+            <li>Posts List</li>
+            <li>Team List</li>
+            <li>News List</li>
           </ul>
         </div>
+          <div class="sub-categories-list">
+          <span>Grids</span>
+          <ul>
+            <li>Posts Grid</li>
+            <li>Team Grid</li>
+            <li>News Grid</li>
+          </ul>
+        </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-button.svg">
-            <span>Button</span>
+            <img src="assets/add-panel/icon-social.svg">
+            <span>Social</span>
           </div>
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Button</span>
+          <span class="hide">Social</span>
           <ul>
-            <li>Themed</li>
-            <li>Text & Icon</li>
-            <li>Icons</li>
-          </ul>
-        </div>
-        <div class="sub-categories-list">
-          <span>Payment Buttons</span>
-          <ul>
-            <li>Pay Buttons</li>
-            <li>PayPal Buttons</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="category-item">
-        <div class="category-name">
-          <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-gallery.svg">
-            <span>Gallery</span>
-          </div>
-          <img class="arrow" src="assets/add-panel/arrow.svg">
-        </div>
-        <div class="sub-categories-list">
-          <span>Gallery</span>
-          <ul>
-            <li>Recomended</li>
-            <li>Pro Galleries</li>
-            <li>Slider Galleries</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="category-item">
-        <div class="category-name">
-          <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-decorative.svg">
-            <span>Decorative</span>
-          </div>
-          <img class="arrow" src="assets/add-panel/arrow.svg">
-        </div>
-        <div class="sub-categories-list">
-          <span>Shapes</span>
-          <ul>
-            <li>My Lines</li>
-            <li>Themed Lines</li>
-            <li>Basic Shapes</li>
-          </ul>
-        </div>
-        <div class="sub-categories-list">
-          <span>Vector Art</span>
-          <ul>
-            <li>Featured</li>
-            <li>Icons</li>
-            <li>Animals</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="category-item">
-        <div class="category-name">
-          <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-video.svg">
-            <span>Video & Music</span>
-          </div>
-          <img class="arrow" src="assets/add-panel/arrow.svg">
-        </div>
-        <div class="sub-categories-list">
-          <span>Video</span>
-          <ul>
-            <li>Wix Video</li>
-            <li>Video Box</li>
-            <li>Video Mask</li>
-          </ul>
-        </div>
-        <div class="sub-categories-list">
-          <span>Music</span>
-          <ul>
-            <li>Audio Players</li>
-            <li>Wix Music</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="category-item">
-        <div class="category-name">
-          <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-contact.svg">
-            <span>Contact & Forms</span>
-          </div>
-          <img class="arrow" src="assets/add-panel/arrow.svg">
-        </div>
-        <div class="sub-categories-list">
-          <span>Forms</span>
-          <ul>
-            <li>Contact</li>
-            <li>Payments</li>
-            <li>Donations</li>
-            <li>Form Applications</li>
-          </ul>
-        </div>
-        <div class="sub-categories-list">
-          <span>Google Maps</span>
-          <ul>
-            <li>Maps</li>
-            <li>Full Width Maps</li>
-          </ul>
-        </div>
-        <div class="sub-categories-list">
-          <span>Chat</span>
-          <ul>
-            <li>Wix Chat</li>
+            <li>Social Bar</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Pinterest</li>
             <li>LINE</li>
           </ul>
         </div>
+              <hr>
       </div>
-      <hr>
       <div class="category-item">
         <div class="category-name">
           <div class="flex justify-center align-center">
-            <img src="assets/add-panel/icon-store.svg">
-            <span>Store</span>
+            <img src="assets/add-panel/icon-members.svg">
+            <span>Members</span>
           </div>
           <img class="arrow" src="assets/add-panel/arrow.svg">
         </div>
         <div class="sub-categories-list">
-          <span>Store</span>
+          <span class="hide">Members</span>
           <ul>
-            <li>Wix Art Store</li>
-            <li>Paypal Button</li>
+            <li>Members Profile Card</li>
+            <li>Members Page</li>
+            <li>Login Bar</li>
+            <li>Members Menu</li>
           </ul>
         </div>
+              <hr>
       </div>
 
     </div>
@@ -517,67 +425,67 @@
     <div class="add-content">
       <img class="close" src="assets/add-panel/close.svg" alt="">
       <div class="content-empty">
-        <div align="center"> <img src="assets/add-panel/empty.svg" alt=""><br><br>
+        <div align="center"> <img src="assets/add-panel/empty.svg" alt=""><br>
           <span>Choose a category on the side and drag elements to the stage to add them to your website.</span></div>
       </div>
       <div class="content-element">
         <h1>Category Example (Button)</h1>
         <span>Drag & Drop elements to the stage to add them to your website.</span>
         <div class="buttons">
-          <img src="assets/add-panel/buttons/button (1).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (2).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (3).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (4).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (5).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (6).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (7).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (8).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (9).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (10).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (11).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (12).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (13).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (14).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (15).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (16).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (17).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (18).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (19).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (20).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (21).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (22).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (23).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (24).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (25).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (26).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (27).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (1).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (2).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (3).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (4).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (5).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (6).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (7).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (8).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (9).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (10).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (11).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (12).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (13).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (14).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (15).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (16).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (17).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (18).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (19).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (20).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (21).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (22).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (23).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (24).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (25).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (26).png" draggable="true" ondragstart="drag(event)" alt="">
-          <img src="assets/add-panel/buttons/button (27).png" draggable="true" ondragstart="drag(event)" alt="">
+           <div class="button-container"><img src="assets/add-panel/buttons/button (1).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (2).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (3).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (4).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (5).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (6).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (7).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (8).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (9).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (10).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (11).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (12).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (13).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (14).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (15).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (16).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (17).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (18).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (19).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (20).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (21).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (22).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (23).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (24).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (25).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (26).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (27).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (1).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (2).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (3).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (4).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (5).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (6).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (7).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (8).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (9).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (10).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (11).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (12).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (13).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (14).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (15).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (16).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (17).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (18).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (19).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (20).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (21).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (22).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (23).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (24).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (25).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (26).png" class="button-img" alt=""></div>
+           <div class="button-container"><img src="assets/add-panel/buttons/button (27).png" class="button-img" alt=""></div>
         </div>
       </div>
     </div>
@@ -586,8 +494,32 @@
   <!-- END OF ADD PANEL -->
 
   <!-- STAGE -->
-  <div id="stage" class="stage" ondrop="drop(event)" ondragover="preventDefaultBehaviour(event)">
+  <div id="stage" class="stage">
     <img class="indicator" src="assets/add-panel/indicator.png" alt="">
+  </div>
+
+    <!-- INTRODUCTION - INSTRUCTIONS TO THE TESTER -->
+    <div class="instructions">
+    <div class="overlay"></div>
+    <div class="modal">
+
+      <h1>Welcome to <img src="assets/img/wixLogo.svg" alt=""> Editor Usability Test!</h1>
+      <p>Feature being tested: <b>Add Panel</b></p>
+      <p>Demo Version: <b>2.0</b></p>
+      <br>
+      <div align="left"> <p><b>Test Scenario:</b> Let’s say you have a Wix website and you wish to add a new CTA button to your homepage. How would you search, choose and add the button to your website?</p>
+      <p><b>Tasks:</b>
+        <ul>
+          <li>Open the Add Panel</li>
+          <li>Search and Choose a button to add</li>
+          <li>Add the chosen button to the stage</li>
+        </ul>
+      </p></div>
+      <br>
+      <div class="tip"><img src="assets/add-panel/bulb.svg" alt=""><b>If you ever feel lost, you can press down the SHIFT key on your keyboard to get some on-screen clues.</b></div>
+      <br><br>
+      <button id="start">Start Test</button>
+    </div>
   </div>
 
   <!-- ADD PANEL JAVASCRIPT -->
@@ -595,6 +527,12 @@
 
   <!-- DRAG & DROP JAVASCRIPT -->
   <script src="./assets/js/drag-and-drop.js"></script>
+
+    <!-- SEARCH/FILTER JAVASCRIPT -->
+    <script src="./assets/js/filter.js"></script>
+
+    <!-- INSTRUCTIONS JAVASCRIPT -->
+    <script src="./assets/js/instructions.js"></script>
 
 </body>
 
